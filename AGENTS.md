@@ -52,6 +52,29 @@ Until project safety rules are explicitly revised, all work must assume:
 - Simulation and replay must be built before any real vehicle action support.
 - The donor project `angelovAlex/w211-can-server` may be mined for CAN-B knowledge only; it must not be copied in as production server architecture.
 
+## Codex Repository Memory Contract
+
+GitHub is the canonical Codex-facing project memory for KITT.
+
+Every future Codex task must update:
+
+- `docs/codex-last-report.md` with the latest task report,
+- `docs/continuation.md` with the next-step handoff,
+- `docs/PROJECT_CONTEXT.md` when project context changes,
+- `docs/FILE_MANIFEST.md` whenever files are added, moved, or reclassified.
+
+Completion reports must include:
+
+- summary,
+- files changed,
+- validation commands and results,
+- safety confirmations,
+- commit hash or PR reference,
+- push/merge status,
+- exact next recommended task.
+
+Do not rely on a chat transcript as the only project memory after a task is complete. The repository must be left readable by a fresh Codex session.
+
 ## Testing Requirements
 
 - Documentation changes must keep all Markdown internally consistent.
