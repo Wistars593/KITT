@@ -5,9 +5,9 @@
 - Repository: `Wistars593/KITT`.
 - Visibility: public.
 - Default branch: `main`.
-- Phase 1 Python simulation skeleton is merged into `main`.
-- Phase 1 merge commit: `5f0be94523fb55b142359a36fca079662d4c450d`.
-- ChatGPT project migration into GitHub docs/source archive completed on 2026-06-21.
+- Phase 2 read-only decoder scaffolding is complete on branch `phase-2-read-only-decoder-scaffolding`.
+- Phase 1 remains the merged baseline in `main`.
+- ChatGPT project migration into GitHub docs/source archive remains complete.
 
 ## What Exists Now
 
@@ -17,12 +17,11 @@
 - File classification in `docs/FILE_MANIFEST.md`.
 - W211 network notes in `docs/w211-can-networks.md`.
 - W211 donor project analysis in `docs/w211-can-server-analysis.md`.
-- Phase 1 implementation notes in `docs/implementation-notes.md`.
-- ChatGPT migration record in `docs/chatgpt-project-migration-2026-06-21.md`.
-- Raw migrated ChatGPT project exports under `incoming/chatgpt-project/2026-06-21/`.
-- Python package skeleton under `src/kitt/`.
-- Synthetic CAN fixture under `fixtures/can/synthetic/sample-log.jsonl`.
-- Tests under `tests/`.
+- Phase 1 simulation package under `src/kitt/`.
+- Phase 2 pure read-only decoder scaffolding under `src/kitt/decoders/`.
+- Synthetic CAN fixtures under `fixtures/can/synthetic/`.
+- Synthetic decoded expectations under `fixtures/decoded/synthetic/`.
+- Tests under `tests/` including decoder tests.
 
 ## Safety Posture
 
@@ -45,32 +44,15 @@ Still absent by design:
 
 ## Next Approved Task
 
-Start Phase 2: pure read-only decoder scaffolding.
+Stay within Phase 2 and expand donor-informed decoder coverage carefully.
 
-Phase 2 scope:
+Recommended next scope:
 
-- Define decoder interfaces.
-- Add decoder registry.
-- Add W211-oriented decoder module structure.
-- Use sanitized synthetic fixtures only.
-- Add tests for deterministic decoder behavior.
-- Keep unknown CAN IDs safely ignored.
-- Keep decoder modules pure and side-effect-free.
-- Keep all hardware and transmit code out of scope.
-
-Suggested structure:
-
-```text
-src/kitt/decoders/
-src/kitt/decoders/base.py
-src/kitt/decoders/registry.py
-src/kitt/decoders/w211/
-src/kitt/decoders/w211/can_b.py
-src/kitt/decoders/w211/can_c.py
-src/kitt/decoders/w211/can_d.py
-tests/decoders/
-fixtures/can/synthetic/
-```
+- add more sanitized synthetic fixtures,
+- introduce donor-informed `CAN B` decoder candidates with explicit scaffolded labeling,
+- add fixture-driven tests for field extraction and unknown-frame handling,
+- keep decoder modules pure and side-effect-free,
+- continue avoiding hardware access and transmit.
 
 ## Mandatory Codex Behavior
 
@@ -98,4 +80,4 @@ Do not connect to a real car.
 Do not add PCAN/SocketCAN/python-can code.
 Do not import real CAN captures.
 Do not copy donor project code as runtime architecture.
-Do not add voice/UI/Raspberry Pi services before decoder scaffolding is stable.
+Do not add voice/UI/Raspberry Pi services before decoder coverage and fixture discipline are stronger.

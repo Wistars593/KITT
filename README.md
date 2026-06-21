@@ -2,7 +2,7 @@
 
 KITT is the start of an assistant-style system for the Mercedes-Benz W211. The intended long-term platform is Raspberry Pi, with staged support for read-only CAN observation, W211 event decoding, local memory, UI, voice interaction, route/context memory, and only much later carefully gated manual actions.
 
-The repository now includes the initial Phase 1 Python simulation skeleton. It remains simulation-only: no vehicle-control code, CAN transmit code, Raspberry Pi services, hardware CAN integration, or voice agent implementation is included.
+The repository now includes the initial Phase 2 read-only decoder scaffolding on top of the Phase 1 simulation skeleton. It remains simulation-only: no vehicle-control code, CAN transmit code, Raspberry Pi services, hardware CAN integration, or voice agent implementation is included.
 
 The ChatGPT project memory has been migrated into GitHub/Codex-facing repository docs and source archives. Future Codex work should use this repository, especially `AGENTS.md`, `docs/continuation.md`, and `docs/codex-last-report.md`, as the canonical handoff state.
 
@@ -14,6 +14,7 @@ The ChatGPT project memory has been migrated into GitHub/Codex-facing repository
 - migration rules defined,
 - decision records started,
 - Python package skeleton added for simulation, replay, validation, and tests,
+- pure read-only decoder scaffolding added with registry and synthetic W211-oriented examples,
 - ChatGPT project exports migrated into `incoming/chatgpt-project/2026-06-21/`,
 - Codex continuation/report files added.
 
@@ -63,6 +64,7 @@ The ChatGPT project memory has been migrated into GitHub/Codex-facing repository
 ├── pyproject.toml
 ├── src/
 │   └── kitt/
+│       └── decoders/
 └── tests/
 ```
 
@@ -109,10 +111,19 @@ kitt-can-validate fixtures/can/synthetic/sample-log.jsonl
 
 This skeleton is simulation-only. It supports JSONL frame validation, offline replay, and future pure decoder work. It does not include real CAN hardware access, transmit support, or vehicle-action behavior.
 
+Phase 2 adds pure read-only decoder scaffolding only:
+
+- immutable decoder interfaces,
+- immutable decoder registry,
+- W211-oriented decoder module structure,
+- sanitized synthetic decoding fixtures,
+- deterministic decoder tests.
+
 ## Intentionally Not Implemented Yet
 
 - real CAN transmit,
 - SocketCAN or PCAN integration,
+- runtime decoder claims against a real vehicle,
 - automatic window or lock control,
 - OBD/CAN D tooling,
 - production CAN logging software,
