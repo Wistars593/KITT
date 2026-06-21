@@ -4,6 +4,8 @@ KITT is the start of an assistant-style system for the Mercedes-Benz W211. The i
 
 The repository now includes the initial Phase 1 Python simulation skeleton. It remains simulation-only: no vehicle-control code, CAN transmit code, Raspberry Pi services, hardware CAN integration, or voice agent implementation is included.
 
+The ChatGPT project memory has been migrated into GitHub/Codex-facing repository docs and source archives. Future Codex work should use this repository, especially `AGENTS.md`, `docs/continuation.md`, and `docs/codex-last-report.md`, as the canonical handoff state.
+
 ## Current Status
 
 - canonical repository memory created,
@@ -11,14 +13,20 @@ The repository now includes the initial Phase 1 Python simulation skeleton. It r
 - safety model defined,
 - migration rules defined,
 - decision records started,
-- Python package skeleton added for simulation, replay, validation, and tests.
+- Python package skeleton added for simulation, replay, validation, and tests,
+- ChatGPT project exports migrated into `incoming/chatgpt-project/2026-06-21/`,
+- Codex continuation/report files added.
 
 ## Important Documents
 
+- [AGENTS.md](AGENTS.md)
 - [SAFETY.md](SAFETY.md)
 - [ROADMAP.md](ROADMAP.md)
 - [MIGRATION.md](MIGRATION.md)
 - [docs/PROJECT_CONTEXT.md](docs/PROJECT_CONTEXT.md)
+- [docs/continuation.md](docs/continuation.md)
+- [docs/codex-last-report.md](docs/codex-last-report.md)
+- [docs/chatgpt-project-migration-2026-06-21.md](docs/chatgpt-project-migration-2026-06-21.md)
 - [docs/w211-can-networks.md](docs/w211-can-networks.md)
 - [docs/w211-can-server-analysis.md](docs/w211-can-server-analysis.md)
 - [docs/can-safety-model.md](docs/can-safety-model.md)
@@ -39,6 +47,9 @@ The repository now includes the initial Phase 1 Python simulation skeleton. It r
 ├── archive/
 ├── docs/
 │   ├── PROJECT_CONTEXT.md
+│   ├── continuation.md
+│   ├── codex-last-report.md
+│   ├── chatgpt-project-migration-2026-06-21.md
 │   ├── FILE_MANIFEST.md
 │   ├── can-safety-model.md
 │   ├── w211-can-networks.md
@@ -47,11 +58,12 @@ The repository now includes the initial Phase 1 Python simulation skeleton. It r
 ├── fixtures/
 │   ├── can/
 │   └── decoded/
+├── incoming/
+│   └── chatgpt-project/
 ├── pyproject.toml
 ├── src/
 │   └── kitt/
 └── tests/
-└── incoming/
 ```
 
 `incoming/` is for raw migrated source material. `archive/` is for retained historical material. `docs/` is for cleaned, canonical project knowledge that future work should rely on.
@@ -67,11 +79,13 @@ The repository now includes the initial Phase 1 Python simulation skeleton. It r
 
 ## How To Use This Repo
 
+- Read [AGENTS.md](AGENTS.md) before starting any Codex task.
+- Read [docs/continuation.md](docs/continuation.md) for the current handoff.
 - Read [docs/PROJECT_CONTEXT.md](docs/PROJECT_CONTEXT.md) before starting technical work.
-- Follow [AGENTS.md](AGENTS.md) for repository-level instructions.
 - Use [SAFETY.md](SAFETY.md) and [docs/can-safety-model.md](docs/can-safety-model.md) as the guardrails for any CAN-related task.
 - Place raw imported notes under `incoming/` or `archive/`.
 - Promote only cleaned and reviewed knowledge into `docs/`.
+- Update `docs/codex-last-report.md` and `docs/continuation.md` at the end of every Codex task.
 
 ## Local Development
 
