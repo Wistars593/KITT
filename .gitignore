@@ -1,23 +1,66 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+.env
+.env.*
+!.env.example
+
+# Secrets and keys
+secrets/
+secret/
+keys/
+key/
+*.key
+*.pem
+*.p12
+*.crt
+*.cer
+*.der
+*.ovpn
+
+# Private references and notes
+private/
+private-references/
+notes/private/
+
+# Automotive data
+captures/
+logs/can/
+raw-can/
+*.asc
+*.blf
+*.mf4
+*.pcap
+voice-recordings/
+audio/raw/
+gps/
+location-logs/
+routes/
+
+# Large manuals and raw references
+manuals/raw/
+references/raw/
+*.pdf
+
+# Build artifacts
+build/
+dist/
+out/
+tmp/
+.tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+.idea/
 .vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-files
-*.bclicense
-*.flf
-#Test results file
-TestResults.xml
+*.swp
+*.swo
