@@ -4,8 +4,8 @@ KITT is the initial repository for a Mercedes-Benz W211 assistant project intend
 
 ## Current State
 
-- Phase 0 only: documentation, migration structure, safety model, and ADRs.
-- No application code is implemented yet.
+- Phase 1 skeleton: documentation, migration structure, safety model, ADRs, and a simulation-first Python package scaffold.
+- The codebase currently supports offline JSONL validation, replay, and generic event containers only.
 - Default development posture is read-only.
 
 ## W211 Network Context
@@ -36,4 +36,4 @@ KITT is the initial repository for a Mercedes-Benz W211 assistant project intend
 
 ## Immediate Next Step
 
-The next implementation task should establish a Python project skeleton oriented toward simulation, replay, and future read-only decoding, without introducing real CAN transmit behavior.
+The next implementation task should expand sanitized fixtures and introduce pure read-only decoder scaffolding, still without real CAN transmit or hardware access.

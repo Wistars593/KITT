@@ -1,0 +1,3 @@
+{"timestamp":"2026-06-21T12:00:00.000000Z","bus":"can-b-sim","arbitration_id":"0x123","data":"01020304","is_extended_id":false}
+{"timestamp":"2026-06-21T12:00:01.500000Z","bus":"can-b-sim","arbitration_id":"0x1A4","data":"AA55","is_extended_id":false}
+{"timestamp":"2026-06-21T12:00:03.000000Z","bus":"can-c-sim","arbitration_id":"0x18FF50E5","data":"0001020304050607","is_extended_id":true}

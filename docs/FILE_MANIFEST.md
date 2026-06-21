@@ -11,6 +11,7 @@
 - `docs/w211-can-networks.md`
 - `docs/w211-can-server-analysis.md`
 - `docs/can-safety-model.md`
+- `docs/implementation-notes.md`
 - `docs/decisions/0001-read-only-first.md`
 - `docs/decisions/0002-obd-is-diagnostic-not-raw-can-b.md`
 
