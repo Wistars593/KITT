@@ -1,0 +1,4 @@
+{"timestamp":"2026-06-21T12:10:00.000000Z","bus":"can-b-sim","arbitration_id":"0x000","data":"01","is_extended_id":false}
+{"timestamp":"2026-06-21T12:10:00.500000Z","bus":"can-b-sim","arbitration_id":"0x014","data":"5a","is_extended_id":false}
+{"timestamp":"2026-06-21T12:10:01.000000Z","bus":"can-c-sim","arbitration_id":"0x200","data":"01","is_extended_id":false}
+{"timestamp":"2026-06-21T12:10:01.500000Z","bus":"can-d-sim","arbitration_id":"0x01c","data":"023e02","is_extended_id":false}

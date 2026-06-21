@@ -22,8 +22,11 @@
 
 - `pyproject.toml`
 - `src/kitt/`
+- `src/kitt/decoders/`
 - `tests/`
 - `fixtures/can/synthetic/sample-log.jsonl`
+- `fixtures/can/synthetic/decoder-sample-log.jsonl`
+- `fixtures/decoded/synthetic/decoder-sample-events.json`
 
 ## Archived Or Raw Source Material
 

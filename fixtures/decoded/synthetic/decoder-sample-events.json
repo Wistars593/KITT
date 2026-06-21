@@ -1,0 +1,52 @@
+[
+  {
+    "source": "w211.can_b.synthetic_ezs_a1",
+    "name": "synthetic_lock_state",
+    "value": "locked",
+    "confidence": 0.5,
+    "metadata": {
+      "bus": "can-b-sim",
+      "arbitration_id": "0x000",
+      "scaffolded": true,
+      "signal_name": "synthetic_lock_state",
+      "source_note": "Synthetic Phase 2 decoder scaffold inspired by donor research."
+    }
+  },
+  {
+    "source": "w211.can_b.synthetic_dbe_a1",
+    "name": "synthetic_cabin_temperature_c",
+    "value": 22.5,
+    "confidence": 0.4,
+    "metadata": {
+      "bus": "can-b-sim",
+      "arbitration_id": "0x014",
+      "scaffolded": true,
+      "signal_name": "synthetic_cabin_temperature_c",
+      "source_note": "Synthetic Phase 2 decoder scaffold inspired by donor research."
+    }
+  },
+  {
+    "source": "w211.can_c.synthetic_chassis_status",
+    "name": "synthetic_chassis_awake",
+    "value": true,
+    "confidence": 0.25,
+    "metadata": {
+      "bus": "can-c-sim",
+      "arbitration_id": "0x200",
+      "scaffolded": true,
+      "source_note": "Synthetic Phase 2 decoder scaffold for CAN C routing only."
+    }
+  },
+  {
+    "source": "w211.can_d.synthetic_kwp_request",
+    "name": "synthetic_diagnostic_service",
+    "value": "tester_present",
+    "confidence": 0.3,
+    "metadata": {
+      "bus": "can-d-sim",
+      "arbitration_id": "0x01c",
+      "scaffolded": true,
+      "source_note": "Synthetic Phase 2 decoder scaffold inspired by diagnostic request IDs."
+    }
+  }
+]

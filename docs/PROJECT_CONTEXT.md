@@ -5,8 +5,8 @@ KITT is the initial repository for a Mercedes-Benz W211 assistant project intend
 ## Current State
 
 - Repository `Wistars593/KITT` is public and uses `main` as the canonical branch.
-- Phase 1 skeleton is merged into `main`: documentation, migration structure, safety model, ADRs, and a simulation-first Python package scaffold.
-- The codebase currently supports offline JSONL validation, replay, and generic event containers only.
+- Phase 2 scaffolding adds pure read-only decoder interfaces and a decoder registry on top of the Phase 1 simulation-first Python package scaffold.
+- The codebase currently supports offline JSONL validation, replay, generic event containers, and synthetic decoder scaffolding only.
 - ChatGPT project migration into GitHub/Codex-facing docs/source archive was completed on 2026-06-21.
 - Default development posture is read-only.
 
@@ -49,4 +49,4 @@ The donor project includes CAN write behavior and automation ideas, but KITT mus
 
 ## Immediate Next Step
 
-The next implementation task should be Phase 2: expand sanitized fixtures and introduce pure read-only decoder scaffolding, still without real CAN transmit or hardware access.
+The next implementation task after Phase 2 scaffolding should expand sanitized fixtures and add donor-informed, clearly marked read-only CAN-B decoder coverage without introducing real CAN transmit or hardware access.
